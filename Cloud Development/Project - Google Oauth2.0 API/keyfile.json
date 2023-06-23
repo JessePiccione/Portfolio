@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nimble-radio-386900",
+  "private_key_id": "0dbc77b798bb83b49558f9609b434b64c50ebf27",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDc8/mN1CJp0EA6\ngcRWSSqcUw9olOp1MTVXIqE6UFoOp9aUqMifvFskVg1OFFuJwLrR7Tah2G9NHinX\nNg2mhuQfTUSMSsvo5WRjyiWyb7PlRdslp/YmbZVhv8IzBVMEovsIQD5nK1o7Dn7V\npmZUHmQ0Ay3cxA8bksO+E+aAwYzhS6YYLmYG9cWDrmLuXwha4nLke9ecbvh6F9YM\nhUQ+QVdiLrFkkXcPIf0BLhWAwidvvml4i+Y0LrSblMOgfbJ8eLQTIrOaBjyPR2Ix\ny8xLjn9lJbBp2Uh5vM+w0aSNVBTsQz2pkvScfb1i3jE84xv5Sn+e8AlEUeKzktfl\nzgEtJ3jVAgMBAAECggEADIXtforn+mxZv5csTCGwfxS8GlbaZRMJbWtijP4R5KPB\np0JbwKX52njgHy1LNOcOD6jswEaWpF3RzEddhbM+icGk4Xi5zvT1eCx0b4UiQpvv\nfFZlPq9WWKh4NtEV7/zW0pRllQ5helhreuuIADuKvWHyvwEDxDHQ01yoY2LU+83l\nX56VEPsARDYQ1sBUpDgw1ucsWicy4BPPSG22ypBcjZNAoHHZuZO9OOCBLhe5L4hM\n5ZITY3HmtPWhE9bvQ5GwohEAvK9EX5sbJUtZv8ExEUpOuLbXScGPjCrSozB8KP3w\n2jJvTdF5Es/gmuLIQxDWw4i1wZnU8oT2UiaMQHUj7wKBgQDz7Lk1qhTjChXRkSEu\ntOs0Pi9Lt1Vbx/HpytTz8M+OzILpAAsumIieHCsOmwx/pZegedMARaSNsyr4dRqA\n6pCUXtj9GXXgAopFBoAw1eQRuimpJ5tKzyi4hqIT//ea1OqMrLH1uWZ0aHkzLgH2\n7K2nBrWCwGyswWZ0Oh6H1mCk3wKBgQDn5CEp6h+eVXWfVTw87D2Jw9R4yCaIT684\nJ5GPhEJTHcy2UoD2791fipMHi5rB/uj4NqbpwWCvynHayCSkdTSBuVgYmHqCmhNz\nxdjAJtxfXlISsqUX/JpFtDSKUG2l7OKkx5WqwP3K3vfUjPmIKlglPc793JaSGeCF\nOfpcfvbEywKBgA5UV8UJStTToNiA2BwwUKjvBkRCbudHZbTAT6ZM/UR8Syx47i88\nkroHGZhwD1noVnH89iJL9RDF975E0tvD695re//SYRRZ0dmgOiOkTROlhhED3KGW\nbeP5NMhL/zW/UFAXTRUMYTJxeL1C9KaW3NS1FjCqMTgs3GHzkBuWwnKtAoGBAKko\nGiUYO45lqtLa+4E5l75qUxD0eF9ROXFOM/msMjGteEq7roXz/dmXHaAQb4j6aXm/\nbEzympRBqoI9I7WwJehHiwMOH7grqur2NSIedv0+scIf/RydUPBt/zGyb/ns7nvj\nd8NC2x/lPIYZfGGe+gPYrak0A8Z6B/VHkOFuYJa3AoGBAOokF+vrl4F6MPpWWq+J\nPqu13Akry++aWfTuJsqf9+tEIf0EC4/fNFo9IIMxMpoga86WdstPlfoCUpx83Mmc\nQrGDLx9ogGswhY1hK2oo48/RDPT3iT0uziLjcLYLFABeTyf+l1MlLn3GcC6wm+pY\nWmhE/j6bbLr7EXyescK+p5MF\n-----END PRIVATE KEY-----\n",
+  "client_email": "nimble-radio-386900@appspot.gserviceaccount.com",
+  "client_id": "104782279628050023588",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nimble-radio-386900%40appspot.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

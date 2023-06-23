@@ -1,0 +1,29 @@
+{
+  "name": "auth0-client",
+  "version": "1.0.0",
+  "description": "A app to run on the cloud baby using auth0 and google datastore ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "deploy": "gcloud app deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Jesse Piccione piccionj@oregonstate.edu",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/datastore": "^7.5.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "json-to-html": "^0.1.2",
+    "jwks-rsa": "^3.0.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  }
+}

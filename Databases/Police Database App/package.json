@@ -1,0 +1,17 @@
+{
+    "name": "PoliceApp",
+    "version": "1.0.0",
+    "description": "App for storing information on police stuff",
+    "main": "app.js",
+    "author": "JessePiccione",
+    "license": "GPL-3.0-or-later",
+    "dependencies": {
+        "body-parser": "^1.13.3",
+        "es6-promise": "^4.2.8",
+        "express": "^4.17.1",
+        "express-handlebars": "4.0.1",
+        "multer": "^1.4.2",
+        "mysql": "^2.18.1",
+        "requirejs": "^2.3.6"
+    }
+}

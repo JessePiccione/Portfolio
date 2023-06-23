@@ -1,0 +1,290 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background: #333333;
+    color:#f2f2f2;
+    padding: 1%;
+    font-size: 400%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content{
+    background-color: dimgray;
+}
+.pagecontent{
+    top: 0;
+    max-width: 80%;
+    background: white;
+    padding-top: 1%;
+    margin-left: 10%;
+    position: relative;
+}
+.mynavbar{
+    overflow: hidden;
+    background-color: #333333;
+    z-index: 1;
+}
+.mynavbar a{
+    
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1.5% 1.5%;
+    text-decoration: none;
+    font-size: 150%;
+
+}
+
+.sticky{
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 5.8%;
+}
+.mynavbar a:hover {
+    background-color: rgb(110, 109, 109); /* Add a hover color */
+
+}
+.mynavbar a.active {
+    background-color: #272727; /* Add an active/current color */
+}
+
+  /*Slide Show css effect*/
+.bigchungus{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.chinga{
+    background-color: #c0c0c0;
+}
+/*List  content*/
+ul{ 
+    padding: 3%;
+    position: relative;
+    font-size: 150%;
+    font-family: serif;
+}
+/*Form  content*/
+#emailForm{
+    background-color: #c0c0c0;
+    margin-left: 10%;
+    padding: 0.5%;
+}
+.myformcss{
+    border: 1px solid black;
+    width: 60%;
+    padding: 1% 1%;
+    position: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.myformcss input[type=text], textarea{
+    width: 80%;
+    padding: 1%;
+    border: 1px solid #ccc;
+    margin-left: 10%;
+    resize: vertical;
+}
+.myformcss label{
+    margin: 10%;
+    color: rgb(121, 121, 121);
+}
+/*Headers content*/
+.pheadercss{
+    font-style: bold;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 300%;
+}
+
+/* stuff for a table */
+table{
+    width: 60%;
+    margin-left: 20%;
+}
+table, td{
+    text-align: center;
+    border: 1px solid black;
+}
+/*other stuff*/
+.scrollBox{
+    height: 100px;
+    width: 40%;
+    border: 1px solid #ccc;
+    font: 130% Georgia, Garamond, Serif;
+    overflow:auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+#apcsBUT{
+    padding: 4px 3px;
+    border: 1px black solid;
+    font: black;
+    text-decoration: none;
+    background-color: lightgray;
+}
+.writing{
+    text-align: left; 
+    font-size:  130%;
+    font-family: serif;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+pre{
+    margin-left: 5%;
+   
+}
+
+/*media screen adjust*/
+@media only screen and (max-width: 1200px){
+    .bigchungus{
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .pagecontent{
+        top: 0;
+        max-width: 100%;
+        background: white;
+        padding-top: 1%;
+        margin-left: 0%;
+        position: relative;
+    }
+}
+@media only screen and (max-width: 768px){
+    pre{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .bigchungus{
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    .pagecontent{
+        top: 0;
+        max-width: 100%;
+        background: white;
+        padding-top: 1%;
+        margin-left: 0%;
+        position: relative;
+    }
+    .header{
+        font-size: 290%;
+    }
+
+}
+@media only screen and (max-width: 630px){
+    pre{
+            margin-left: 5%;
+            margin-right: 5%;
+        
+        text-align: left; 
+        font-size:  50%;
+    }
+    .bigchungus{
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .pagecontent{
+        top: 0;
+        max-width: 100%;
+        background: white;
+        padding-top: 1%;
+        margin-left: 0%;
+        position: relative;
+    }
+    .header{
+        font-size: 120%;
+    }
+    .mynavbar a{
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        
+        text-align: center;
+        padding: 4% 1%;
+        
+        text-decoration: none;
+        font-size: 90%;
+    
+    }
+    .sticky + .content {
+        padding-top: 12%;
+    }
+    ul{
+        padding: 5%;
+    }
+    li{  
+        font-size: 80%;
+    }
+    .writing{
+        text-align: left; 
+        font-size:  80%;
+        font-family: serif;
+        margin-left: 10%;
+        margin-right: 10%;
+    
+    }
+    .pheadercss{
+        font-style: bold;
+        margin-left: auto;
+        text-align: center;
+        margin-bottom: 2%;
+        font-size: 120%;
+    }
+    #emailForm{
+        background-color: #c0c0c0;
+        margin-left: 10%;
+        padding: 0.5%;
+    }
+    .myformcss{
+        border: 1px solid black;
+        width: 80%;
+        padding: 1% 1%;
+        position: auto;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .myformcss input[type=text], textarea{
+        width: 80%;
+        padding: 1%;
+        border: 1px solid #ccc;
+        margin-left: 10%;
+        resize: vertical;
+    }
+    .myformcss label{
+        margin: 10%;
+        color: rgb(121, 121, 121);
+    }
+    .scrollBox{
+        height: 100px;
+        width: 40%;
+        border: 1px solid #ccc;
+        font: 80% Georgia, Garamond, Serif;
+        overflow:auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
+    }
+}

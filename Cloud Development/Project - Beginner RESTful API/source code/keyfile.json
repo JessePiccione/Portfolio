@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "assignment-2-restful-api",
+  "private_key_id": "57f59860b470a20b0ccd7c9bf132b9e48c30f485",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCr1ffaB2OPCz5V\nFVp6xJ6XNkuXeuESaFhn4sPJpvpcwiEyKJq5NLQBPkXaRFqpYsjBRlk+p8+rtFs1\niHvENZriH0scFEDF4EcmRk+N7Xs4drbgdtVBxQP/3cs/fBoPr79yN1iml5JQwABm\nGQz26Lso16PfUMlxzGTizggTJdjsH5wAr7CBrLURC5HbWdVPBgVPP1vUqOoxN5iU\nW2hNxKMh/RCldbDWaXOMuQI101h/6DC75h0TggZ9jPfwOaEFxcQiTmHEhZtb2YC/\naX+NEXUq1vmpC13fMZbblRUUcHYrni7CSp14kv3UHWyh+HLYusW/svfjUZdncv5P\nAvLaeqa/AgMBAAECggEAGxyP1fvLdq1t9hZVPRXaSykFuo6TMLMmRlcjeqSt+hum\nXtfEOGDQiSUDosFH0qjjhtxsG/QgfSAK3K0+OyzAAARdoT5azT2qdtH/dE5aCNnG\nLIU4oX9jDFLjYg6uZ/eGi7qgHJdr6PIE6MGevN2RxgsRRRyQeV7SiMG8Hr/zyVFI\nkUIy/1zTfa+/7ppvZ4q/iusS/w4siJfMQqccz3zpaVDzgaFD8N0wPvP7K0mN+kdh\nZejz9ByvL/IfFbvGjSeWdIxuQIvD9qqFlhlC5W/IRkCTaqLTp/HecGx1gw4nTTz4\ntbeZvvwU4n6ECX4liAFwE7F+Yhw2rCNp/CMWITwfvQKBgQDU8N1Pr5sx9SeaMX4U\nAyqRmd8ItPmJHj6mbjSGNdEvDE3oCJqUbEIBgpgo+syp85cRdsiYYM35p+b25nQ6\nKN/6aQTRZgEny8ieVe26PqtcY2JUSaQbtgZ4vCXpXwawKJl9/t/M46IsWxlTZoL7\nmP6etiMn9QTHRfKmVbgPR1FuQwKBgQDOlUBoctZynrNjwGU8LJBOR1/XBJIwAXkL\n5wsQhjzJ4rLp8c0v5Vd4As15O9Vcn93fzesYG9A4o+s55emwkZKXOhFn385xrcFM\nXDNXg0Xhs0tKyF3KIuy6CUMUInzoFMvBzOEiILk3Jaeee5blgy0RFhdzP1R7Hsvl\nuCUKPzJj1QKBgE1+91wn0bhluyrvti28VUK2GCiIDIStgCl71Bu//Eg+FyBJ+U/o\n8kCwcYYAeHmlkCYn76sdF/ky9OiISGZeN91fWQSINgVwsauGJEVyx1SRStjYECSR\no1tPRhDfp4R20h27o2FiusOfx+DFXwgHzyqdqL/C+SE4wK1uZtUQpH8XAoGBAL6D\naEWq+lf0Qa3Rpcrrsh1ut1UdMxAwm4g9h7eyhGcOuT8Ertzn3VWhCAsxAeCM0lpu\nlcvDArDpgqn/fRdH+O+cLqckAEhYHHamZPbk6lJuPhZ2WABtWvFqT0FHWPfTDeHp\nZwpJMWZJRJ7kjVGWOr6SKAgxtGBjE1kEDKy5gWgNAoGASUJJAR91YmkrL1zyfNrd\ndYVQxj2LUdnDInfqQrwZ3XNHt9Fsv3d2kOJGAI4nwv4wt16M5B99eck+856VSDKU\nnAzCaotdCzqLY9YXa9zGNd/whpfX7f0CsXYke1bu2G6Nwsfn9FHXaFHWCbOPIhxY\nQBjtEcw3tuzGEstJlCJeo/s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "datastore-firstrest@assignment-2-restful-api.iam.gserviceaccount.com",
+  "client_id": "112809559489425980671",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/datastore-firstrest%40assignment-2-restful-api.iam.gserviceaccount.com"
+}

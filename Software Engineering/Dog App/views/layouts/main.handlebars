@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang ='en'>
+    <head>
+        <meta charset = 'utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doggy Data</title>
+        <meta name ='description' content = 'This is a dog app. It is a very goog boy. I like good boys. The only kind of dog that we all want is one that is hot. 
+        I love meta data. I like dogs but I am allergic. Dog Stats. Find out what dog is best for you. 
+        find out training things for you puppy etc. The list goes on and on and on. This is Just a bunch of random not important text. Yes I know where this shows up.'>
+        <meta name ='author' content= 'Jesse Piccione'>
+        <link rel = 'stylesheet' href = 'https://www.w3schools.com/w3css/4/w3.css'>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" />
+        <link rel='stylesheet' href='/css/Style.css' />
+        <script src="https://smtpjs.com/v3/smtp.js"></script>  
+
+    </head>
+    <body>
+        <!--Page header-->
+        <div class = 'header'>
+            <b>Doggy Data</b>
+        </div>
+        <div class = "content">
+            <div class = 'pagecontent'>
+                <form method='post' action='/'>
+                    <fieldset>
+                        <legend>
+                            <h1 class = 'pheadercss'><b>Search for a Breed</b></h1>
+                        </legend>
+                        <input type = 'text' name = 'search' placeholder="Please enter a Dog breed..." size = '80'>
+                        <input type ='submit' value = 'GO'>
+                    </fieldset>
+                </form>
+                <hr />
+                {{{body}}}
+                <br />
+                <ul >
+                    <h1>Training Tips</h1>
+                    <li>If your dog is aggressive, it might be best to get a trainer.</li>
+                    <li>Chose your dogs name wisely.</li>
+                    <li>Decide on rules and do not change them unless it is permanent.</li>
+                    <li>Give them there own area to relax.</li>
+                    <li>Help your animal relax (more for a new dog).</li>
+                    <li>Reward the good behavior.</li>
+                    <li>Ignore the bad behavior.</li>
+                    <li>Train them on thier own time, they forget something they did after about 2 minutes.</li>
+                    <li>Do not allow jumping at all.</li>
+                    <li>Say no to biting and nipping, if you give a sharp loud yell the will be surprise and back right off.</li>
+                </ul>
+                <br>
+                <br>
+                <h1 class = 'pheadercss'><b>Popular Breeds //not up and running </b></h1>
+                <div class='w3-content w3-display-container w3-center'>
+                    <img class = 'bigchungus' src = 'German_Shepherd.jpg'>
+                    <img class = 'bigchungus' src = 'German_Shepherd1.png'>
+                    <img class = 'bigchungus' src = 'German_Shepherd2.png'>
+                    <img class = 'bigchungus' src = 'German_Shepherd3.png'>
+                    <br />
+                    <button class = 'w3-button demo chinga'>1</button>
+                    <button class = 'w3-button demo chinga'>2</button>
+                    <button class = 'w3-button demo chinga'>3</button>
+                    <button class = 'w3-button demo chinga'>4</button>
+                    <br />
+                    <button class = 'w3-button w3-black-display-left' id = 'left'>&#10094; Back</button>
+                    <button class = 'w3-button w3-black-display-right' id = 'right'>Next &#10095;</button>
+                
+                </div> 
+                <br />
+                <br>
+                <hr />
+                
+            
+                <!-- request tester form-->
+            
+                <form class = 'myformcss'>
+                    <legend><b>Any Issues - Uses This Form</b></legend>
+                    <hr />
+                    <fieldset>
+                                    
+                        <label>Your Email<br /></label>
+                        <input type = 'text' id = 'email' size='50' maxlength = '100'  placeholder="Your email...">           
+                        <br />           
+                        <label>Breifly describe your issue<br /></label>
+                        <textarea id = 'textContent' name = 'emailText' cols = '67' style = 'height: 170px;'  placeholder="Your message here..."></textarea>
+                        <br />
+                        <button id = 'emailForm'>Send</button> 
+                                 
+                    </fieldset> 
+                </form>
+                  
+                       
+                <br />
+            </div> 
+        </div>
+  
+        <script src='js/Script.js'></script>
+     
+    </body>
+</html>

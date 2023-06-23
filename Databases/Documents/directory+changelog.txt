@@ -1,0 +1,15 @@
+Link to the website:
+http://flip1.engr.oregonstate.edu:10101/
+
+Directory of the website
+/ -> Home / index directory
+/Officers -> Officers directory
+/Reports -> Reports directory
+/Fines -> Fines directory
+/ReportFines -> ReportFines directory
+/Criminals -> Criminals directory
+
+Changelog:
+- Criminals will not open a new tab. Instead, it keeps on the opened tab.
+- Implemented Create & Read. Database now connected to the web.
+- Implemented Update & Delete

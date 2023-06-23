@@ -1,0 +1,36 @@
+<form action='/portfolio' method="POST">
+    <legend>New art Portfolio:</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name of Portfolio"><br/>
+
+    <label for="type">Type:</label>
+    <input type="text" id="type" name="type" placeholder="Type of Portfolio"><br/>
+
+    <label for="public">Visability:</label>
+    <select id="public" name="public" >
+        <option value=1>Public</option>
+        <option value=0>Private</option>
+    </select><br/>
+    <input type='submit' >
+</form>
+<br/>
+<div>
+    {{#if portfolios}}
+        <table>
+        {{#each portfolios}}
+            <tr>
+                <th><a href = '/portfolio/{{id}}'>{{name}}</a></th>
+            </tr>
+        {{/each}}
+        </table>
+    {{/if}}
+</div>
+<div>
+    {{#if pieces}}
+        {{#each pieces}}
+            <tr>
+                <th><a href = '/piece/{{id}}'>{{name}}</th>
+            </tr>
+        {{/each}}
+    {{/if}}
+</div>

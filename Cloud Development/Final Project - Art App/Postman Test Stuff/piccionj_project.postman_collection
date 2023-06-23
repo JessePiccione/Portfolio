@@ -1,0 +1,1058 @@
+{
+	"info": {
+		"_postman_id": "e8f563fb-d83b-492e-9144-7161adb95883",
+		"name": "art-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26955806"
+	},
+	"item": [
+		{
+			"name": "get a create user form in html",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/login/create/user"
+			},
+			"response": []
+		},
+		{
+			"name": "post create/user valid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"piccionj@oregonstate.edu\",\r\n    \"password\": \"Testpassword1234!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/login/create/user"
+			},
+			"response": []
+		},
+		{
+			"name": "post create/user invalid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"password\": \"Testpassword1234!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/login/create/user"
+			},
+			"response": []
+		},
+		{
+			"name": "get a login page form html",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "post /login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"function extractCookieValue(setCookieHeader) {\r",
+							"  const regex = /your-regex-pattern-here/;\r",
+							"  const match = setCookieHeader.match(regex);\r",
+							"  return match ? match[1] : null; // Modify the regex and extraction logic as per your specific cookie format\r",
+							"}\r",
+							"const setCookieHeader = pm.response.headers.get('Set-Cookie');\r",
+							"const token = extractCookieValue(setCookieHeader);\r",
+							"pm.environment.set('jwt', token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"piccionj@oregonstate.edu\",\r\n    \"password\": \"Testpassword1234!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "get userpage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/userpage"
+			},
+			"response": []
+		},
+		{
+			"name": "create portfolio 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('portfolio_id', pm.response.json()['portfolios'][0]['id']);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Jesse's Test Portfolio\",\r\n    \"type\":\"Fancy ART STUFF\",\r\n    \"public\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "create portfolio missing params 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Jesse's Test Portfolio\",\r\n    \"type\":\"Fancy ART STUFF\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "get portfolio by id 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/portfolio/{{portfolio_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "get portfolio by id 404 cant find bad id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/portfolio/badvalue"
+			},
+			"response": []
+		},
+		{
+			"name": "put portfolio 303",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Big Chungus\",\r\n    \"type\": \"Ugandan Knuckles\",\r\n    \"public\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio/{{portfolio_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "put portfolio bad id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Big Chungus\",\r\n    \"type\": \"Ugandan Knuckles\",\r\n    \"public\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio/badid"
+			},
+			"response": []
+		},
+		{
+			"name": "put portfolio bad body 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Big Chungus\",\r\n    \"type\": \"Ugandan Knuckles\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio/badid"
+			},
+			"response": []
+		},
+		{
+			"name": "put portfolio 303",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Big Chungus\",\r\n    \"type\": \"Ugandan Knuckles\",\r\n    \"public\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio/{{portfolio_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "put portfolio bad id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Big Chungus\",\r\n    \"type\": \"Ugandan Knuckles\",\r\n    \"public\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio/badurl"
+			},
+			"response": []
+		},
+		{
+			"name": "delete portfolio 204 success no content",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{app_url}}/portfolio/{{portfolio_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete portfolio 404 not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{app_url}}/portfolio/{{portfolio_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "create portfolio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('portfolio_id_1', pm.response.json()['portfolios'][0]['id']);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Jesse's Test Portfolio 1\",\r\n    \"type\":\"Fancy ART STUFF\",\r\n    \"public\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "create portfolio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('portfolio_id_2', pm.response.json()['portfolios'][0]['id']);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Jesse's Test Portfolio 2\",\r\n    \"type\":\"Fancy ART STUFF\",\r\n    \"public\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "get all portfolios 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "create piece 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('piece_id', pm.response.json()['pieces'][0]['id']);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Test Name\", \r\n        \"description\": \"This is a test description\",\r\n        \"price\":\"$50\",\r\n        \"portfolio_id\": \"{{portfolio_id_1}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece"
+			},
+			"response": []
+		},
+		{
+			"name": "create piece missing parameter 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Test Name\", \r\n        \"description\": \"This is a test description\",\r\n        \"price\":\"$50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece"
+			},
+			"response": []
+		},
+		{
+			"name": "create piece bad portfolio id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Test Name\", \r\n        \"description\": \"This is a test description\",\r\n        \"price\":\"$50\",\r\n        \"portfolio_id\": \"01101010\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece"
+			},
+			"response": []
+		},
+		{
+			"name": "get piece by id 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "get piece bad id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/piece/badid"
+			},
+			"response": []
+		},
+		{
+			"name": "put piece 303",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Updated Name\",\r\n    \"description\":\"Updated Description\",\r\n    \"price\":\"$1000000\",\r\n    \"portfolio_id\":{{portfolio_id_2}},\r\n    \"image_url\":\"newImageUrl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "put piece missing params 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Updated Name\",\r\n    \"description\":\"Updated Description\",\r\n    \"price\":\"$1000000\",\r\n    \"portfolio_id\":{{portfolio_id_2}}\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "put piece invalid portfolio id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Updated Name\",\r\n    \"description\":\"Updated Description\",\r\n    \"price\":\"$1000000\",\r\n    \"portfolio_id\":\"badid\",\r\n    \"image_url\":\"newImageUrl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "put piece bad id piece 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Updated Name\",\r\n    \"description\":\"Updated Description\",\r\n    \"price\":\"$1000000\",\r\n    \"portfolio_id\":{{portfolio_id_2}},\r\n    \"image_url\":\"newImageUrl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/badid"
+			},
+			"response": []
+		},
+		{
+			"name": "put piece 303 used to set relationship as well",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Updated Name\",\r\n    \"description\":\"Updated Description\",\r\n    \"price\":\"$1000000\",\r\n    \"portfolio_id\":{{portfolio_id_2}},\r\n    \"image_url\":\"newImageUrl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "patch piece missing attributes 303",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Updated Name\",\r\n    \"description\":\"Updated Description\",\r\n    \"price\":\"$1000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "patch piece bad id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Updated Name\",\r\n    \"description\":\"Updated Description\",\r\n    \"price\":\"$1000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/badid"
+			},
+			"response": []
+		},
+		{
+			"name": "patch piece bad id for portfolio 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Updated Name\",\r\n    \"description\":\"Updated Description\",\r\n    \"price\":\"$1000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/badid"
+			},
+			"response": []
+		},
+		{
+			"name": "get all pieces 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/piece"
+			},
+			"response": []
+		},
+		{
+			"name": "remove relationship 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{app_url}}/piece/{{piece_id}}/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "remove relationship badid 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{app_url}}/piece/badid/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "create relationship 303",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"portfolio_id\":{{portfolio_id_2}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete portfolio 1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{app_url}}/portfolio/{{portfolio_id_1}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete portfolio 2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{app_url}}/portfolio/{{portfolio_id_2}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete piece 1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete piece BAD ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{app_url}}/piece/{{piece_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{app_url}}/login/user"
+			},
+			"response": []
+		},
+		{
+			"name": "405 only allowing get.put,post,patch,delete",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": "{{app_url}}/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "406 bad content type",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "somedatat",
+							"value": "datta",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{app_url}}/portfolio"
+			},
+			"response": []
+		},
+		{
+			"name": "401 delete cookie and test for 401",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{app_url}}/portfolio"
+			},
+			"response": []
+		}
+	]
+}

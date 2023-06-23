@@ -1,0 +1,64 @@
+<div>
+    <h1 class='tableheader'><b>{{title}}<b></h1>
+    <table>   
+        <tbody>
+            <tr>
+                <th class='bold'>
+                    BadgeNumber
+                </th>
+                <th class='bold'>
+                    First Name
+                </th>
+                <th class='bold'>
+                    Last Name
+                </th>
+                <th class='bold'>
+                    Years Of Service
+                </th>
+                <th class='bold'>
+                    Email
+                </th>
+                <th class='bold'>
+                    Phone
+                </th>
+                <th class='bold'>
+                    Editor Column
+                </th>
+            </tr>
+            {{#if results}}
+            {{#each results}}
+            <tr>
+                <td>
+                   {{this.BadgeNumber}} 
+                </td>
+                <td>
+                   {{this.Fname}} 
+                </td>
+                <td>
+                   {{this.Lname}} 
+                </td>
+                <td>
+                   {{this.YearsOfService}} 
+                </td>
+                <td>
+                   {{this.Email}} 
+                </td>
+                <td>
+                   {{this.Phone}} 
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            {{/each}}
+            {{/if}}
+            <tr>
+                <td>
+                    <form method="get" action="/add_Officers">
+                        <input type='submit' value='Add new Officer'>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

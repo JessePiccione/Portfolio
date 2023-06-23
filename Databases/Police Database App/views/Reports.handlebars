@@ -1,0 +1,52 @@
+<div>
+    <h1 class='tableheader'><b>{{title}}<b></h1>
+    <table>   
+        <tbody>
+            <tr>
+                <th class='bold'>
+                    Report ID
+                </th>
+                <th class='bold'>
+                    Criminal ID
+                </th>
+                <th class='bold'>
+                    Badge Number
+                </th>
+                <th class='bold'>
+                    Date
+                </th>
+                <th class='bold'>
+                    Time
+                </th>
+            </tr>
+            {{#if results}}
+            {{#each results}}
+            <tr>
+                <td>
+                   {{this.ReportID}} 
+                </td>
+                <td>
+                   {{this.CriminalID}} 
+                </td>
+                <td>
+                   {{this.BadgeNumber}} 
+                </td>
+                <td>
+                   {{this.Date}} 
+                </td>
+                <td>
+                   {{this.Time}} 
+                </td>
+            </tr>
+            {{/each}}
+            {{/if}}
+            <tr>
+                <td>
+                    <form method="get" action="/add_Reports">
+                        <input type='submit' value='Add new Reports'>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

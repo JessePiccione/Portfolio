@@ -1,0 +1,52 @@
+<div>
+    <h1 class='tableheader'><b>{{title}}<b></h1>
+    <table>   
+        <tbody>
+            <tr>
+                <th class='bold'>
+                    CriminalID
+                </th>
+                <th class='bold'>
+                    First Name
+                </th>
+                <th class='bold'>
+                    Last Name
+                </th>
+                <th class='bold'>
+                    Date of Birth
+                </th>
+                <th class='bold'>
+                    NumberOfCrimes
+                </th>
+            </tr>
+            {{#if results}}
+            {{#each results}}
+            <tr>
+                <td>
+                   {{this.CriminalID}} 
+                </td>
+                <td>
+                   {{this.Fname}} 
+                </td>
+                <td>
+                   {{this.Lname}} 
+                </td>
+                <td>
+                   {{this.DoB}} 
+                </td>
+                <td>
+                   {{this.NumberOfCrimes}} 
+                </td>
+            </tr>
+            {{/each}}
+            {{/if}}
+            <tr>
+                <td>
+                    <form method="get" action="/add_Criminals">
+                        <input type='submit' value='Add new Criminals'>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

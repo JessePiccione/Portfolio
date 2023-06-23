@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "piccionj-node-app",
+  "private_key_id": "d3826e839b97956bb28e40c57ec7d58f7ae10dec",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCxpJt5no0hFd/J\nwJmBTI/2k2jbdy3HvqFlzFNrZSRkZPxm0BfK3aH6xsNx5I8TTJDwsH4T/z+Wa3yf\nwJehzeSHW/27A9KCNtB99JOb1PkGRM/hokG+yGuobOTTncs7WuWdrHhtvB87wCRr\nuT9lkOqn5MSdbbKmSSHXdzKN+nZkSLSi9qVmwHh/j/HoETflkA7M7IkK186McrC8\ngqkFQwWIeruyOaqqLVgCdy0wXPSPcTTUYIVS0bpTzhmjCTaQMrCnWQEQnPXgNf9W\nanky2BjDwzvHnn2pm9EvnUEqtLFFoSn+h64Zp1KIDilwyNN7oLsuyRBPBV2aykj2\nF0AFhvkpAgMBAAECggEABBVfF5Ab+Wc50jbxsGW0p3vi/KyEKmPI7QCh6EWWbRJf\nNPPSoDCxEQUxp/QTj+OCL243L7l92jTVVAzGz4relnf4YKypUaH17/dHz1y5brn1\nN2AV988+nkwGhJDLg61GuvWkfQ1GgIadr7Y97VVD96EMHfxQD3993iiYyme4Af0a\nD8/UX1w8Q0xsZIwHWR5+xYraMRCUBVRRy38gwWmnKDx08AtmpPuvj75tFDdOjybE\nr88coqU8OZX5AdtjtDLG7lWS6j63xfZP9nDJrDx8cYsQ4N0Ts8p5Oj32ryqUyOuJ\nm4eAAtclXCn3vW2Fg2oBIzXWJHeJ/pZ8rWuNekHEEwKBgQDYBYv9Ro1qnl6RTtqz\ngyYS7Gto3MuyMiWHSijwiDxC72Iton1DmzZYMzVh+WNB8rcktpIsXN4DV4BKHbih\nizSrwVlyMyzNTexBe31e8UgbZrWVEeidx2poiFT7+T6eTIDZI19pvMQdp4c+nc8+\nKLyRRkfr2W4KRJDQCksbQOKHDwKBgQDShMuSFmj8dL7lkvBajnPbwPYVO8QLtxxJ\nK4CtRB2E2OKoUML/a7DPefRAMAcTT0SVaeJS4m6YrvO7U/eyvgyyNVrabga2sALk\nuerKC39kFNTSphWee5w09T9ySaGVpjr9fnEpB/sMNgf+5MXvOlVUGXLkrxTpG9tJ\nL7r/gDQ8RwKBgFftyhGKCj3/wJZ89mBjXbgOK5o/ZVpfNw9ejFN74KuOLPROU5aV\nMwWrsmryzAgn94wmFFGia2wIzdtdRa3br9DJntLxKadXtHbjASEILUWaBQdshrbS\nWOm7tHvr9CUTFs9Lqqarg1hevJosOhMfGcI4TUYe9r+PMTK9Pd0WCB7ZAoGBAJOQ\nBenGz5x2cQEW+GdhhxC4t0W2+PqFRcx8M9w/7LkcFfSJd8X2RJ+KCo2bnLoKTDa3\nW69hjMh1id77QpsF4HxiLecCTK5tvfl54Hvzhz4t4+gsBudqGdp9NhX0StFNDfh2\nUvfB4lVy4jPnRF8l8n3awNBPcUbdAd7RGDDUOsktAoGBAKRkAJdoTapVPbsMhmon\ngczpDM+7uNqv6z4YgylQsliQj9qWKPaMVHIgHdPiydvyuUHXzXOS5nELRKLuqw5K\nn/bsP8tyI8rbNPG99FJFqh7pOV5qTFKI9rR2iDdoOWmFjAYzNczFa7wbvzBvwEQ3\nfwU3gsllndWBG5+Qq2gtKtqN\n-----END PRIVATE KEY-----\n",
+  "client_email": "piccionj-node-app@appspot.gserviceaccount.com",
+  "client_id": "114140921808432632746",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/piccionj-node-app%40appspot.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

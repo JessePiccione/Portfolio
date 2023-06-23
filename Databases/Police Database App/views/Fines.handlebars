@@ -1,0 +1,46 @@
+<div>
+    <h1 class='tableheader'><b>{{title}}<b></h1>
+    <table>   
+        <tbody>
+            <tr>
+                <th class='bold'>
+                    Fine ID
+                </th>
+                <th class='bold'>
+                    Name
+                </th>
+                <th class='bold'>
+                    Amount
+                </th>
+                <th class='bold'>
+                    Points
+                </th>
+            </tr>
+            {{#if results}}
+            {{#each results}}
+            <tr>
+                <td>
+                   {{this.FineID}} 
+                </td>
+                <td>
+                   {{this.Name}} 
+                </td>
+                <td>
+                   {{this.Amounts}} 
+                </td>
+                <td>
+                   {{this.Points}} 
+                </td>
+            </tr>
+            {{/each}}
+            {{/if}}
+            <tr>
+                <td>
+                    <form method="get" action="/add_Fines">
+                        <input type='submit' value='Add new Fines'>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

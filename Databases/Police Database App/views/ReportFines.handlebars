@@ -1,0 +1,49 @@
+<div>
+    <h1 class='tableheader'><b>{{title}}<b></h1>
+    <table>   
+        <tbody>
+            <tr>
+                <th class='bold'>
+                    Report Number
+                </th>
+                <th class='bold'>
+                    Fine Number
+                </th>
+                <th>
+                    Edit Row
+                </th>
+            </tr>
+            {{#if results}}
+            {{#each results}}
+            <tr>
+                <td>
+                   {{this.ReportID}} 
+                </td>
+                <td>
+                   {{this.FineID}} 
+                </td>
+                <td>
+                    <form method='get' action="/update">
+                        <input type="hidden" value={{this.ReportID}} name="ReportID">
+                        <input type="hidden" value={{this.FineID}} name="FineID">
+                        <input type='submit' value='Update'>
+                    </form>
+                    <form method='post' action='/delete'>
+                        <input type="hidden" value={{this.ReportID}} name="ReportID">
+                        <input type="hidden" value={{this.FineID}} name="FineID">
+                        <input type='submit' value='Delete'>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+            {{/if}}
+            <tr>
+                <td>
+                    <form method="get" action="/add_ReportFines">
+                        <input type='submit' value='Add new Report Fines'>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
