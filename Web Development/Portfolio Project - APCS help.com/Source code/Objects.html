@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang ='en'>
+    <head>
+        <meta charset = 'utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>APCS Help - Objects</title>
+        <meta name ='description' content = 'This Page is APCS Help'>
+        <meta name ='author' content= 'Jesse Piccione'>
+        <link rel = 'stylesheet' href = 'https://www.w3schools.com/w3css/4/w3.css'>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" />
+        <link rel='stylesheet' href='css/Style.css'>
+      
+    </head>
+
+    <body>
+        <!--Page header-->
+        <div class = 'header'>
+            <b>APCSHelp.com - Objects</b>
+        </div>
+        <!--Making a floating menu bar-->
+        
+        <div class = 'mynavbar' id = 'navbar'>
+            <a href = 'index.html'>Home</a>
+            <a href = 'Strings.html'>Strings</a>
+            <a class = 'active' href = 'Objects.html'>Objects</a>
+            <a href = 'Recursion.html'>Recursion</a> 
+            <a href = 'ProblemSolving.html'>Problems</a>  
+            <a href = 'https://codingbat.com/java' target = '_Blank'>Coding Bat</a>  
+        </div>
+    
+    <div class = "content">
+    <div class = 'pagecontent'>
+        <h2 class = 'pheadercss'><b>What's an Object?</b></h2>
+        <hr />
+        
+            <div class = 'writing'>
+                <p>There are two essential types of data that allow Java to work. Primitive data types like 
+                <code>int, char, double, float, long, and boolean</code>. <b>Objects</b> are essentially containers 
+                of data. With the data stored, several methods can be stored in an Object's class to 
+                perform tasks for the Object's needs. All objects are children of a class known as Object. 
+                Object contains methods which can be overidden by its children's class. Common methods like
+                <code>toString()</code> and <code>equals(Object obj)</code> are inherited from Object. However, the classes can specify
+                there own methods as long as the method headers just need to match to properly overide.
+                With that being said here is a basic class for x and y points:</p>
+            
+                <pre>
+                <code>
+public class Point implements Comparable{
+
+    //instance data
+
+    private int x;
+                    
+    private int y;
+
+    //overloaded constructers
+                       
+    //default 
+                       
+    public Point(){
+                        
+        this.x = 0;
+                        
+        this.y = 0;
+                        
+    }
+                       
+    //parameterized contructer
+                       
+    public Point(int x, int y){
+                        
+        this.x = x;
+                        
+        this.y = y;
+                        
+    }
+
+    //accessor methods "getters"
+
+    public int getX(){
+
+        return x;
+
+    }
+
+    public int getY(){
+
+        return y;
+
+    }
+
+    //mutator methods "setters"
+
+    public void setX(int x){
+
+        this.x = x;
+
+    }
+
+    public void setY(int y){
+
+        this.y = y;
+
+    }
+
+    //Comparable methods 
+
+    public int compareTo(Object obj){
+                            
+        Point p = (Point)obj;
+                            
+        double size1 =(Math.sqrt((this.x * this.x)+(this.y*this.y)));
+                            
+        double size2 = (Math.sprt((p.getX() * p.getX()) +(p.getY() * p.getY())));
+                            
+        if(size1 &lt size2){
+                            
+            return -1;
+                            
+        }
+        else if(Math.abs(size1-size2) &lt= 0.001){
+                            
+            return 0;
+                            
+        }
+
+        return 1;
+
+    }
+
+    // equals overide
+
+    public boolean equals(Object obj){
+
+        Point p = (Point)obj;
+
+        return this.x == p.getX() && this.y == p.getY();
+
+    }
+
+    //toString overide 
+
+    public String toString(){
+
+        return "(" + x + ", " + y + ")";
+                        
+    }
+
+}
+                </code> 
+            </pre>
+        
+                <p>This may seem like a lot right?</p>
+        </div>
+        
+        <hr />
+
+        <h2 class = 'pheadercss'><b>The Structure of the Class</b></h2>
+        <hr />
+        <ul style = "font-size: 18px;font-family: serif;">
+            
+            <li><b>Instance Data</b> - data specified for each object that is created</li>
+            <li><b>Defualt Constructer</b> - a constructer that takes in no data to instantiate the object</li>
+            <li><b>Parameterized Constructer</b> - a constructer which takes in data to instantiate the object</li>
+            <li><b>Accessor or getter methods</b> - methods that return the data of the object</li>
+            <li><b>Mutator or setter methods</b> - methods that change the data of the object</li>
+            <li><b>Comparable interface</b> - requires compareTo method in the class</li>
+            <li><b>equals method overide</b> - overides equals method from parent class Object</li>
+            <li><b>toString method overide</b> - overides the toString method from parent class Object</li>            
+            <br />
+            <div class = "">
+                <a id = "apcsBUT" href="ap_CSapp.pdf" download="proposed_file_name" target = '_Blank'>
+                    Download APCS APPENDIX
+                </a>
+            </div>
+        </ul>
+        <br />
+        <hr />
+       
+        <h2 class = 'pheadercss'><b>Soon to Be Object Videos</b></h2>
+        <hr />
+        <div class='w3-content w3-display-container w3-center'>
+            <img class = 'bigchungus' src = 'newMeme1.jpg'>
+            <img class = 'bigchungus' src = 'newMeme2.png'>
+            <img class = 'bigchungus' src = 'newMeme3.jpg'>
+            <img class = 'bigchungus' src = 'newMeme4.jpg'>
+            <br />
+            <button class = 'w3-button demo chinga'>1</button>
+            <button class = 'w3-button demo chinga'>2</button>
+            <button class = 'w3-button demo chinga'>3</button>
+            <button class = 'w3-button demo chinga'>4</button>
+            <br />
+            <button class = 'w3-button w3-black-display-left' id = 'left'>&#10094; Back</button>
+            <button class = 'w3-button w3-black-display-right' id = 'right'>Next &#10095;</button>
+           
+        </div> 
+        
+        <br />
+
+        <hr />
+        <h2 class = 'pheadercss'><b>This is a Test Form NOT Currently Sending Emails</b></h2>
+        <hr />
+        <br />
+       
+        <!--using aws simple email api to send an email-->
+        
+                    <form class = 'myformcss'>
+                        <legend><b>Contact Us</b></legend>
+                        <hr />
+                        <fieldset>
+                            
+                            <label>Your Email<br />
+                                <input type = 'text' id = 'email' size='50' maxlength = '100'  placeholder="Your email...">
+                            </label>
+                            <br />
+                            
+                            <label>Your Brief Message<br />
+                                <textarea id = 'textContent' name = 'emailText' cols = '67' style = 'height: 170px;'  placeholder="Your message here..."></textarea>
+                            </label>
+                            <br />
+                            
+                            <button id = 'emailForm'>Send</button>
+                            
+                        </fieldset> 
+                    </form>
+                
+                    <hr />
+                    <h2 class = 'pheadercss'><b>Response from Form</b></h2>
+                    <hr />
+                
+                   <div id = 'postdump' class = 'scrollBox'>
+                       
+                   </div>
+                   <br />
+    </div>
+    </div>
+        <!--script links-->
+        <script src='js/Script.js'></script>
+    </body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang ='en'>
+    <head>
+        <meta charset = 'utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>APCS Help - String</title>
+        <meta name ='description' content = 'This Page is APCS Help'>
+        <meta name ='author' content= 'Jesse Piccione'>
+        <link rel = 'stylesheet' href = 'https://www.w3schools.com/w3css/4/w3.css'>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" />
+        <link rel='stylesheet' href='css/Style.css'>
+      
+    </head>
+
+    <body>
+        <!--Page header-->
+        <div class = 'header'>
+            <b>APCSHelp.com - String</b>
+        </div>
+        <!--Making a floating menu bar-->
+        
+        <div class = 'mynavbar' id = 'navbar'>
+            <a href = 'index.html'>Home</a>
+            <a class= 'active' href = 'Strings.html'>Strings</a>
+            <a href = 'Objects.html'>Objects</a>
+            <a href = 'Recursion.html'>Recursion</a> 
+            <a href = 'ProblemSolving.html'>Problems</a>  
+            <a href = 'https://codingbat.com/java' target = '_Blank'>Coding Bat</a>  
+        </div>
+    
+    <div class = "content">
+    <div class = 'pagecontent'>
+        <h2 class = 'pheadercss'><b>What's a String?</b></h2>
+        <hr />
+        
+            <div class = 'writing'>
+                <p>A <b>String</b> is an array of chararaters with a quiet large data limit around 65535 bytes
+                constructed from concantination in prgramming languages. One the best ways to deal
+                with a string is to treat it as array of chars or other things. Treat str.charAt(i) like a 
+                charArray[i] but with the proper method. To concatinate a string to some other thing:</p>
+        <pre><code>               
+//take a string like
+String str = "name: ";
+//add Some Data 
+str += "John Doe";
+
+</code></pre>
+                <p>After those two lines complete the value of str is what?</p>
+<pre><code>
+ANSWER: "name: John Doe"
+            </code></pre>
+                <p><b>Concatatination</b> is the action of combining two strings. This makes strings highly
+                useful as opposed to a Char[] because we do not have to look at each char as thier own
+                index. With Strings each char has a index but printing is treated as one object. However 
+                to declare a<code> String s </code>can be declared with<code> new String("Hello World");</code>.
+                We can also declare a String like this <code>'String str = "Hello World";</code>. Because
+                that language gives us that beifit like c++.</p> 
+                
+                <p>Strings have many different methods built into the class. Here are some:</p></div>
+        
+        <hr />
+
+        <h2 class = 'pheadercss'><b>String Methods</b></h2>
+        <hr />
+        <ul style = "font-size: 18px;font-family: serif;">
+            
+            <li><b>String substring(int start, int end)</b> - returns a part of a string from start to end indexes not including </li>
+            <li><b>String substring(int start)</b> - returns a part of a string from start to end of string</li>
+            <li><b>int length() </b> - returns length in characters of <b>this</b> </li>
+            <li><b>int indexOf(String str)</b> - returns index of first occurance of str from <b>this</b></li>
+            <li><b>int lastIndexOf(String str)</b> - returns index of last occurance of str from <b>this</b> </li>
+            <li><b>int compareTo(String str)</b> - returns 0 if the objects are equal, &lt; 0 if <b>this</b> is less than <b>str</b>, &gt; 0 if <b>this</b> is greater then <b>str</b></li>
+            <li><b>boolean equals(String str)</b> - returns true if strings are equal, otherwise false</li>
+            <li><b>String toLowerCase()</b> - returns a String with are characters now lower case</li>
+            <li><b>String toUpperCase()</b> - returns a String with all upper case charaters </li>
+            <li><b>boolean contains(String str)</b> - returns true if <b>this</b> has substring of <b>str</b></li>
+            <li><b>int charAt(int i)</b> - returns character located in index i</li>
+            <br />
+            <div class = "">
+                <a id = "apcsBUT" href="ap_CSapp.pdf" download="proposed_file_name" target = '_Blank'>
+                    Download APCS APPENDIX
+                </a>
+            </div>
+        </ul>
+        <br />
+        <hr />
+       
+        <h2 class = 'pheadercss'><b>Soon to Be String Videos</b></h2>
+        <hr />
+        <div class='w3-content w3-display-container w3-center'>
+            <img class = 'bigchungus' src = 'newMeme1.jpg'>
+            <img class = 'bigchungus' src = 'newMeme2.png'>
+            <img class = 'bigchungus' src = 'newMeme3.jpg'>
+            <img class = 'bigchungus' src = 'newMeme4.jpg'>
+            <br />
+            <button class = 'w3-button demo chinga'>1</button>
+            <button class = 'w3-button demo chinga'>2</button>
+            <button class = 'w3-button demo chinga'>3</button>
+            <button class = 'w3-button demo chinga'>4</button>
+            <br />
+            <button class = 'w3-button w3-black-display-left' id = 'left'>&#10094; Back</button>
+            <button class = 'w3-button w3-black-display-right' id = 'right'>Next &#10095;</button>
+           
+        </div> 
+        
+        <br />
+        <pre style = 'text-align: center; font-size:  18px; font-family: serif;'> 
+            
+        </pre>
+        <hr />
+        <h2 class = 'pheadercss'><b>This is a Test Form NOT Currently Sending Emails</b></h2>
+        <hr />
+        <br />
+       
+        <!--using aws simple email api to send an email-->
+        
+                    <form class = 'myformcss'>
+                        <legend><b>Contact Us</b></legend>
+                        <hr />
+                        <fieldset>
+                            
+                            <label>Your Email<br />
+                                <input type = 'text' id = 'email' size='50' maxlength = '100'  placeholder="Your email...">
+                            </label>
+                            <br />
+                            
+                            <label>Your Brief Message<br />
+                                <textarea id = 'textContent' name = 'emailText' cols = '67' style = 'height: 170px;'  placeholder="Your message here..."></textarea>
+                            </label>
+                            <br />
+                            
+                            <button id = 'emailForm'>Send</button>
+                            
+                        </fieldset> 
+                    </form>
+                
+                    <hr />
+                    <h2 class = 'pheadercss'><b>Response from Form</b></h2>
+                    <hr />
+                
+                   <div id = 'postdump' class = 'scrollBox'>
+                       
+                   </div>
+
+                
+    </div>
+    </div>
+        <!--script links-->
+        <script src='js/Script.js'></script>
+    </body>
+</html>
